@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/iv_top_img"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/portrait"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_complete_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hãy hoàn tất hồ sơ của bạn"
+        android:textColor="#1D1617"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_top_img" />
+
+    <TextView
+        android:id="@+id/tv_complete_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Nó sẽ giúp chúng tôi biết thêm về bạn!"
+        android:textColor="#7B6F72"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_complete_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_complete_subtitle">
+
+        <!-- Gender -->
+        <EditText
+            android:id="@+id/edt_gender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_notification"
+            android:drawableStart="@android:drawable/ic_menu_myplaces"
+            android:drawablePadding="10dp"
+            android:hint="Chọn giới tính"
+            android:paddingHorizontal="15dp"
+            android:textSize="12sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false" />
+
+        <!-- Age -->
+        <EditText
+            android:id="@+id/edt_age"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_notification"
+            android:drawableStart="@android:drawable/ic_menu_month"
+            android:drawablePadding="10dp"
+            android:hint="Tuổi của bạn"
+            android:paddingHorizontal="15dp"
+            android:textSize="12sp"
+            android:inputType="number" />
+
+        <!-- Weight -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_personal_weight"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_notification"
+                android:drawableStart="@android:drawable/ic_menu_agenda"
+                android:drawablePadding="10dp"
+                android:hint="Cân nặng của bạn"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="15dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_notification"
+                android:backgroundTint="#C58BF2"
+                android:gravity="center"
+                android:text="KG"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Height -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_personal_height"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_notification"
+                android:drawableStart="@android:drawable/ic_menu_sort_by_size"
+                android:drawablePadding="10dp"
+                android:hint="Chiều cao của bạn"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="15dp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_notification"
+                android:backgroundTint="#C58BF2"
+                android:gravity="center"
+                android:text="CM"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custombutton"
+        android:text="Hoàn tất"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

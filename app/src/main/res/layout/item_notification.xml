@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="15dp">
+
+    <View
+        android:id="@+id/view_icon_bg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_notification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_notification_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/drink"
+        app:layout_constraintBottom_toBottomOf="@id/view_icon_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_icon_bg"
+        app:layout_constraintStart_toStartOf="@id/view_icon_bg"
+        app:layout_constraintTop_toTopOf="@id/view_icon_bg" />
+
+    <TextView
+        android:id="@+id/tv_notification_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Hey, it's time for lunch"
+        android:textColor="#1D1617"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/iv_more"
+        app:layout_constraintStart_toEndOf="@id/view_icon_bg"
+        app:layout_constraintTop_toTopOf="@id/view_icon_bg" />
+
+    <TextView
+        android:id="@+id/tv_notification_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="About 1 minutes ago"
+        android:textColor="#7B6F72"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_notification_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_notification_title" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_menu_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#ADA4A5" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#DDDADA"
+        app:layout_constraintTop_toBottomOf="@id/view_icon_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
